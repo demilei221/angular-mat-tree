@@ -52,6 +52,18 @@ export class TreeNestedOverviewExample {
   }
 
   hasChild = (_: number, node: FoodNode) => !!node.children && node.children.length > 0;
+
+  addNode() {
+    alert('add node triggered');
+    const newNode: FoodNode = {
+      name: 'test',
+      children: [{name: 'test1'}, {name: 'test2'},],
+    };
+
+    const updatedData = [...this.dataSource.data, newNode];
+    this.dataSource.data = updatedData;
+  }
+
 }
 
 
