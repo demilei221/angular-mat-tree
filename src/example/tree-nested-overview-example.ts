@@ -64,6 +64,15 @@ export class TreeNestedOverviewExample {
     this.dataSource.data = updatedData;
   }
 
+  removeNode() {
+    alert('remove node triggered');
+    if (this.dataSource.data.length > 0) {
+      const updatedData = this.dataSource.data.slice(0, -1);
+      this.dataSource.data = updatedData;
+    }
+  }
+  
+
 }
 
 
